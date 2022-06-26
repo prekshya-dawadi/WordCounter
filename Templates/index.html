@@ -1,9 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
 <h1> Welcome to counter! </h1>
 
 <br>
 <br>
 
-<form method = "" action = "counter">
+<form method = "post" action = "counter">
+    {% csrf_token %}
     <textarea name = 'text', rows = '50', cols="50"></textarea><br>
     <input type="submit"/>
-</form> 
+</form> >
